@@ -1,8 +1,8 @@
 ## Angular Elements Hello World
 
-
 ```
 git clone https://github.com/aelbore/angular-elements-hello-world.git
+npm install
 ```
 
 ### Add index.html in `src` folder
