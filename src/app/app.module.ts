@@ -12,14 +12,13 @@ import { AppComponent } from './app.component';
   entryComponents: [ AppComponent ]
 })
 export class AppModule { 
-
-  constructor(private injector: Injector) { }
-
-  ngDoBootstrap() {
-    const AppElement = createCustomElement(AppComponent, { injector: this.injector });
-    customElements.define('app-root', AppElement);
-  }
-
+  ngDoBootstrap() { }
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .then(({ injector }) => {
+    const AppElement = createCustomElement(AppComponent, { injector: injector });
+    customElements.define('app-root', AppElement);
+  });
+

@@ -1,5 +1,5 @@
 {
-  "name": "@ngx-seed/main",
+  "name": "@ngx-seed/toolbar",
   "version": "1.0.0",
   "description": "Angular Application Seed",
   "main": "index.js",
